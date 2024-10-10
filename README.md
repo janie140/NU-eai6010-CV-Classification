@@ -1,4 +1,5 @@
 **Introduction**
+
 Computer vision image classification is a machine learning technique that has gained significant popularity in recent years and serves a wide array of applications. In the context of deep learning, transfer learning involves taking a model trained on one task and customizing it for another.
 Unlike building a model from scratch, transfer learning involves pulling an existing model off
 the shelf and tuning it for a specific use case. This assignment will explore the use of a pre-
@@ -7,6 +8,7 @@ demonstrating how leveraging pre-existing knowledge can enhance performance and 
 in new tasks.
 
 **Data Selection and Methods**
+
 In this project, we utilized a dataset comprising 2301 fruit images sourced from Kaggle,
 categorized into ten classes: Apple, Orange, Avocado, Kiwi, Mango, Pineapple, Strawberries,
 Banana, Cherry, and Watermelon[1]. With approximately 230 images per category, the dataset
@@ -18,8 +20,7 @@ the PyTorch documentation and the paper titled "EfficientNetV2: Smaller Models a
 Training"[2][3].
 To prepare the dataset for modeling, FastAi's features were harnessed to generate a data block,
 facilitating the normalization of the dataset view and the creation of a data loader. Subsequently,
-the Vision Learner (formerly known as CNN Learner) was employed to establish a base learner using the pre-trained EfficientNetV2 model. The validation metric ‘error_rate’ was chosen to
-monitor performance during training.
+the Vision Learner (formerly known as CNN Learner) was employed to establish a base learner using the pre-trained EfficientNetV2 model. The validation metric ‘error_rate’ was chosen to monitor performance during training.
 Fine-tuning the model involved two approaches: first, freezing all layers except the new output
 layer and conducting training epochs solely on the output layer; second, unfreezing the entire
 model and running the specified number of epochs. Initial results from a single epoch run of the
